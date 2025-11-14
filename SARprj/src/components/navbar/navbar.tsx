@@ -2,10 +2,10 @@ import "./navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-transparent">
+    <nav className="navbar navbar-expand-lg bg-transparent pt-3">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          SAR Progettazioni
+        <a className="navbar-brand fs-3" href="#">
+          <strong>SAR Progettazioni</strong> 
         </a>
         <button
           className="navbar-toggler"
@@ -19,20 +19,25 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 pe-5 ">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active text-dark-emphasis" aria-current="page" href="#">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+              <a className="nav-link active text-dark-emphasis" aria-current="page" href="#">
+                Studio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+              <a className="nav-link active text-dark-emphasis" aria-current="page" href="#">
+                Progetti
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active text-dark-emphasis" aria-current="page" href="#">
+                Contatti
               </a>
             </li>
           </ul>

@@ -1,0 +1,27 @@
+.bacColor {
+  background-color: rgb(213, 208, 205);
+}
+
+span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #1c1c1c;
+  transition: all 0.4s; /* Transizione applicata sia per hover che per uscita */
+}
+
+button {
+  position: relative;
+  background: transparent;
+  border: 1.5px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s; /* Transizione per il pulsante */
+}
+
+button:hover span {
+  width: 100%;
+  color: white;
+}
