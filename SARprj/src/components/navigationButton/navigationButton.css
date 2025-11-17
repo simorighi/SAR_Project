@@ -1,7 +1,35 @@
 .bacColor {
   background-color: rgb(213, 208, 205);
+  position: relative;
+  overflow: hidden;
+  height: 23vh;
 }
 
+.cerchio-1{
+  width: 150px;
+  height: 150px;
+  left: -3%;
+  top: -4%;
+
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  background-color: #d3c4b6;
+}
+
+.cerchio-2{
+  width: 200px;
+  height: 200px;
+  top: -70%;
+  right: -8%;
+
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  background-color: #272727;
+}
+
+/*
 span {
   position: absolute;
   left: 0;
@@ -9,7 +37,11 @@ span {
   bottom: 0;
   width: 1px;
   background: #1c1c1c;
-  transition: all 0.4s; /* Transizione applicata sia per hover che per uscita */
+  transition: all 0.4s; 
+}
+
+p:hover{
+  color: white;
 }
 
 button {
@@ -18,10 +50,12 @@ button {
   border: 1.5px solid black;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.4s; /* Transizione per il pulsante */
+  transition: all 0.4s; 
 }
 
 button:hover span {
   width: 100%;
   color: white;
+  z-index: -1;
 }
+ */
