@@ -1,0 +1,23 @@
+.nav-link {
+    position: relative; /* Necessario per posizionare il <span> relativo al <a> */
+    color: inherit; /* Mantiene il colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+  }
+  
+  .nav-link span {
+    position: absolute;
+    bottom: -1px; /* Posiziona il <span> sotto il testo */
+    left: 50%; /* Posiziona il puntino al centro */
+    width: 2.5px; /* Larghezza iniziale del puntino */
+    height: 2.5px; /* Altezza della linea */
+    border: 50% solid; /* Rende il puntino rotondo */
+    background-color: grey; /* Colore della linea */
+    transition: all 0.3s ease; /* Effetto di transizione */
+    transform: translateX(-50%); /* Centra il puntino */
+  }
+  
+  .nav-link:hover span {
+    transform: none; /* Rimuove la trasformazione */
+    width: 100%; /* Espande la linea per sottolineare tutto il testo */
+    left: 0; /* Allinea la linea a sinistra */
+  }

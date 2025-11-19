@@ -23,6 +23,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link active text-dark-emphasis" aria-current="page" href="./pages/home.tsx">
                 Home
+                <span className="span"></span>
               </a>
             </li>
             <li className="nav-item">
