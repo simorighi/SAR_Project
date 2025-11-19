@@ -1,24 +1,25 @@
-import './App.css'
-import Card from './components/navbar/card/card';
-import Navbar from './components/navbar/navbar'
-import CardTitle from './components/navbar/cardTitle/cardTitle';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap-grid.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import NavigationButton from './components/navigationButton/navigationButton';
+import "./App.css";
+/* bootstrap */
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+/* import elements and pages */
+import Navbar from "./components/navbar/navbar";
+import Home from "./pages/home";
 
 function App() {
-  
   return (
     <div>
-    <header>
-      <Navbar></Navbar>
-    </header>
-      <CardTitle/>
-      <NavigationButton/>
-      <Card/>
+      {/* header with navbar */}
+      <header>
+        <Navbar></Navbar>
+      </header>
+      {/* home page */}
+      <Home />
+
+      <footer></footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

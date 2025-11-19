@@ -1,0 +1,20 @@
+// Sovrascrivi le variabili di Bootstrap
+$custom-marrone: #ececec;
+$custom-grigio: rgba(83, 80, 80, 0.514);
+$custom-nero: #ceb399;
+
+// Importa Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.custom-marrone {
+  color: $custom-marrone;
+}
+
+.custom-grigio {
+  color: $custom-grigio;
+}
+
+.custom-nero {
+  color: $custom-nero;
+}

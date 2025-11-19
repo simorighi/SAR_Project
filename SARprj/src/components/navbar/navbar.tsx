@@ -21,7 +21,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 pe-5 ">
             <li className="nav-item">
-              <a className="nav-link active text-dark-emphasis" aria-current="page" href="#">
+              <a className="nav-link active text-dark-emphasis" aria-current="page" href="./pages/home.tsx">
                 Home
               </a>
             </li>
