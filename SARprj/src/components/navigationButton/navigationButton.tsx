@@ -1,43 +1,39 @@
 import "./navigationButton.css";
 import { useState } from "react";
 
+
+type FontSizeOptions = "fs-1" | "fs-2" | "fs-3" | "fs-4" | "fs-5" | "fs-6";
+
 interface NavigationButtonProps {
-  colorBackground: string; // Colore di sfondo del bottone
-  borderColor: string; // Colore del bordo del bottone
-  textColor: string; // Colore del testo del bottone
-  borderWidth?: string; // Opzionale: Spessore del bordo del bottone
+  colorBackground: string;
+  borderColor: string;
+  textColor: string;
+  borderWidth?: string;
+  contentText: string;
+  fontSize?: FontSizeOptions;
 }
 
 function NavigationButton(props: NavigationButtonProps) {
-  const { colorBackground, borderColor, textColor } = props;
+  const { colorBackground, borderColor, textColor, contentText, fontSize } = props;
 
-  // Stato per gestire l'hover
+
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="container border rounded-4 mt-5 bacColor hero-container position-relative">
-      <div className="cerchio-1"></div>
-      <div className="cerchio-2"></div>
-      <div className="cerchio-3"></div>
-      <div className="row">
-        <div className="col-12 d-flex justify-content-center gap-3 my-5">
-          <button
-            className="btn rounded-0 px-5 pt-3 position-relative overflow-hidden"
-            style={{
-              backgroundColor: isHovered ? textColor : colorBackground,
-              borderColor: borderColor,
-              color: isHovered ? colorBackground : textColor,
-              borderWidth: props.borderWidth || "2px",
-            }}
-            onMouseEnter={() => setIsHovered(true)} // Attiva hover
-            onMouseLeave={() => setIsHovered(false)} // Disattiva hover
-          >
-            <p className="fs-5">Learn More</p>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </div>
+    <button
+      className={`btn rounded-0 px-5 pt-3 position-relative overflow-hidden`} // Applica la classe dinamica
+      style={{
+        backgroundColor: isHovered ? textColor : colorBackground,
+        borderColor: borderColor,
+        color: isHovered ? colorBackground : textColor,
+        borderWidth: props.borderWidth || "2px",
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <p className={` ${fontSize}`}>{contentText}</p>
+      <span></span>
+    </button>
   );
 }
 

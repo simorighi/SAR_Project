@@ -1,0 +1,43 @@
+.bacColor {
+    background-color: rgb(213, 208, 205);
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  .cerchio-1{
+    width: 150px;
+    height: 150px;
+    left: -3%;
+    top: -4%;
+  
+    border-radius: 50%;
+    opacity: 0.9;
+    position: absolute;
+    background-color: #d3c4b6;
+  }
+  
+  .cerchio-2{
+    width: 200px;
+    height: 200px;
+    top: -70%;
+    right: -8%;
+  
+    border-radius: 50%;
+    opacity: 0.9;
+    position: absolute;
+    background-color: #272727;
+  }
+  
+  .cerchio-3{
+    width: 200px;
+    height: 200px;
+    top: 45%;
+    right: 20%;
+  
+    border-radius: 50%;
+    opacity: 0.6;
+    position: absolute;
+    background-color: rgba(83, 80, 80, 0.514);
+  }
+  

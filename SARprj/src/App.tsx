@@ -10,7 +10,6 @@ import Home from "./pages/home";
 function App() {
   return (
     <div>
-      {/* header with navbar */}
       <header>
         <Navbar></Navbar>
       </header>

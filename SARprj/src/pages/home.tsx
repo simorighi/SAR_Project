@@ -1,17 +1,14 @@
-import Card from "../components/card/card";
+import CardStudio from "../components/cardStudio/cardStudio";
 import CardTitle from "../components/cardTitle/cardTitle";
-import NavigationButton from "../components/navigationButton/navigationButton";
+import CardNavigation from "../components/cardNavigation/cardNavigation";
 
 function Home() {
   return (
     <>
       <CardTitle />
-      <NavigationButton
-        colorBackground="#ececec"
-        borderColor="#ceb399"
-        textColor="#ceb399"
-      />
-      <Card />
+      <CardNavigation/>
+      <CardStudio />
+      
     </>
   );
 }
