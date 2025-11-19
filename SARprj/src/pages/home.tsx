@@ -7,9 +7,9 @@ function Home() {
     <>
       <CardTitle />
       <NavigationButton
-        colorBackground="#ceb399"
+        colorBackground="#ececec"
         borderColor="#ceb399"
-        textColor="#ececec"
+        textColor="#ceb399"
       />
       <Card />
     </>

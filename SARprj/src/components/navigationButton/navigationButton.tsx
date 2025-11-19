@@ -1,4 +1,5 @@
 import "./navigationButton.css";
+import { useState } from "react";
 
 interface NavigationButtonProps {
   colorBackground: string; // Colore di sfondo del bottone
@@ -10,6 +11,9 @@ interface NavigationButtonProps {
 function NavigationButton(props: NavigationButtonProps) {
   const { colorBackground, borderColor, textColor } = props;
 
+  // Stato per gestire l'hover
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="container border rounded-4 mt-5 bacColor hero-container position-relative">
       <div className="cerchio-1"></div>
@@ -20,12 +24,15 @@ function NavigationButton(props: NavigationButtonProps) {
           <button
             className="btn rounded-0 px-5 pt-3 position-relative overflow-hidden"
             style={{
-              backgroundColor: colorBackground,
+              backgroundColor: isHovered ? textColor : colorBackground,
               borderColor: borderColor,
+              color: isHovered ? colorBackground : textColor,
               borderWidth: props.borderWidth || "2px",
             }}
+            onMouseEnter={() => setIsHovered(true)} // Attiva hover
+            onMouseLeave={() => setIsHovered(false)} // Disattiva hover
           >
-            <p className="fs-5" style={{color: textColor}}>Learn More</p>
+            <p className="fs-5">Learn More</p>
             <span></span>
           </button>
         </div>
