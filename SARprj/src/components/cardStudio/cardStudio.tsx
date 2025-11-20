@@ -3,6 +3,7 @@ import "./cardStudio.css";
 import studio from "../../assets/studio.jpg";
 import ServiziSection from "./serviziSection/serviziSection";
 import ProjectSection from "./projectSection/projectSection";
+import CarouselCards from "./projectSection/projectSection";
 
 function CardStudio() {
   const studioimg = studio;
@@ -35,7 +36,7 @@ function CardStudio() {
       <hr />
       <ServiziSection />
       <hr />
-      <ProjectSection/>
+      <CarouselCards/>
 
     </div>
     
