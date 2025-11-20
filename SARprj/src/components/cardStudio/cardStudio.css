@@ -1,3 +1,13 @@
 .cardShadow{
     box-shadow: 2px 3px 3px 0 #d3c4b6, 0 3px 5px 0 #d3c4b6;
 }
+
+.img-fluid{
+    height: 32vh;
+}
+
+hr{
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+    color: rgba(153, 152, 152, 0.63);
+}
