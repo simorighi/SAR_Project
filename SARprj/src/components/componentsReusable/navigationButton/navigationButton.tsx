@@ -1,5 +1,5 @@
 import "./navigationButton.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 
 type FontSizeOptions = "fs-1" | "fs-2" | "fs-3" | "fs-4" | "fs-5" | "fs-6";
@@ -9,7 +9,7 @@ interface NavigationButtonProps {
   borderColor: string;
   textColor: string;
   borderWidth?: string;
-  contentText: string;
+  contentText: React.ReactNode;
   fontSize?: FontSizeOptions;
 }
 
@@ -21,7 +21,7 @@ function NavigationButton(props: NavigationButtonProps) {
 
   return (
     <button
-      className={`btn rounded-0 px-5 pt-3 position-relative overflow-hidden`} // Applica la classe dinamica
+      className={`btn rounded-0 px-3 pt-3 position-relative overflow-hidden`} 
       style={{
         backgroundColor: isHovered ? textColor : colorBackground,
         borderColor: borderColor,

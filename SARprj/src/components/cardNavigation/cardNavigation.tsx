@@ -1,4 +1,4 @@
-import NavigationButton from "../navigationButton/navigationButton";
+import NavigationButton from "../componentsReusable/navigationButton/navigationButton";
 
 function cardNavigation() {
   return (

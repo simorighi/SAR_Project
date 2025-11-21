@@ -1,134 +1,80 @@
-import { div } from "motion/react-client";
-import React, { useEffect, useState } from "react";
+import Card from "../../componentsReusable/cardGeneral/card";
+import "./projectSection.css";
 
-interface Card {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-}
+import img0 from "../../../assets/houseImg.jpg";
+import img1 from "../../../assets/houseImg.jpg";
+import img2 from "../../../assets/houseImg.jpg";
 
-// 6 CARDS
-const cardsData: Card[] = [
-  {
-    id: 1,
-    title: "Ristrutturazione villetta",
-    description: "Restyling completo con approccio moderno.",
-    image: '/mnt/data/A_website_homepage_for_"SAR_Progettazioni"_is_pres.png',
-  },
-  {
-    id: 2,
-    title: "Appartamento moderno",
-    description: "Design d'interni ottimizzato e luminoso.",
-    image: '/mnt/data/A_website_homepage_for_"SAR_Progettazioni"_is_pres.png',
-  },
-  {
-    id: 3,
-    title: "Casa unifamiliare",
-    description: "Progetto completo su misura.",
-    image: '/mnt/data/A_website_homepage_for_"SAR_Progettazioni"_is_pres.png',
-  },
-  {
-    id: 4,
-    title: "Open space industrial",
-    description: "Ambienti aperti con stile moderno.",
-    image: '/mnt/data/A_website_homepage_for_"SAR_Progettazioni"_is_pres.png',
-  },
-  {
-    id: 5,
-    title: "Villa panoramica",
-    description: "Architettura elegante e funzionale.",
-    image: '/mnt/data/A_website_homepage_for_"SAR_Progettazioni"_is_pres.png',
-  },
-  {
-    id: 6,
-    title: "Ufficio minimal",
-    description: "Spazi professionali dal design pulito.",
-    image: '/mnt/data/A_website_homepage_for_"SAR_Progettazioni"_is_pres.png',
-  },
-];
+function ProjectSection() {
 
-export default function CarouselCards() {
-  const [index, setIndex] = useState(0);
-  const length = cardsData.length;
+  const imgProjects =[
+    img0, img1, img2
+  ]
 
-  const visibleCards = 3;
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((prev) => (prev + 1) % length);
-    }, 3200);
-    return () => clearInterval(id);
-  }, [length]);
+  const projects = [
+    {
+      imgSrc: imgProjects[0],
+      titleCard: "Progetto 1",
+      textCard: "Descrizione del progetto 1",
+      textButton: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="26"
+          fill="currentColor"
+          className="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      ),
+    },
 
-  function prev() {
-    setIndex((prev) => (prev - 1 + length) % length);
-  }
-  function next() {
-    setIndex((prev) => (prev + 1) % length);
-  }
 
-  const getVisible = () => {
-    let a: Card[] = [];
-    for (let i = 0; i < visibleCards; i++) {
-      a.push(cardsData[(index + i) % length]);
-    }
-    return a;
-  };
+    {
+      imgSrc: imgProjects[1],
+      titleCard: "Progetto 2",
+      textCard: "Descrizione del progetto 2",
+      textButton: "Scopri di più",
+    },
+
+
+    {
+      imgSrc: imgProjects[2],
+      titleCard: "Progetto 3",
+      textCard: "Descrizione del progetto 3",
+      textButton: "Scopri di più",
+    },
+  ];
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-2xl font-semibold mb-6">I nostri progetti</h2>
-
-      <div className="relative flex items-center">
-        {/* BUTTON LEFT */}
-        <button
-          onClick={prev}
-          aria-label="Previous"
-          className="absolute left-0 bg-white/80 hover:bg-white shadow-md px-3 py-2 rounded-full z-10"
-        >
-          ‹
-        </button>
-
-        {/* VISIBLE CARDS */}
-        <div className="flex gap-6 mx-auto">
-          {getVisible().map((c) => (
-            <>
-              <div className="container">
-                <div className="row">
-                  <div className="col-12">
-                    <article
-                      key={c.id}
-                      className="w-72 bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
-                    >
-                      <img
-                        src={c.image}
-                        alt={c.title}
-                        className="w-full h-44 object-cover"
-                      />
-                      <div className="p-4">
-                        <h3 className="text-lg font-semibold">{c.title}</h3>
-                        <p className="text-gray-600 text-sm mt-2">
-                          {c.description}
-                        </p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </>
-          ))}
+    <div className="container mx-5 my-5 pb-5">
+      <div className="row">
+        <div className="col-12 overflow-hidden">
+          <h3 className="ms-3">
+            <strong>I Nostri Progetti</strong>
+          </h3>
         </div>
-
-        {/* BUTTON RIGHT */}
-        <button
-          onClick={next}
-          aria-label="Next"
-          className="absolute right-0 bg-white/80 hover:bg-white shadow-md px-3 py-2 rounded-full z-10"
-        >
-          ›
-        </button>
       </div>
-    </section>
+      <div className="row">
+        {projects.map((project, index) => (
+          <div className="col-4" key={index}>
+            <Card
+              imgSrc={project.imgSrc}
+              titleCard={project.titleCard}
+              textCard={project.textCard}
+              textButton={project.textButton}
+              fontSize="fs-6"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
+
+export default ProjectSection;

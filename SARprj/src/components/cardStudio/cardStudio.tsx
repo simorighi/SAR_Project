@@ -1,9 +1,8 @@
-import NavigationButton from "../navigationButton/navigationButton";
+import NavigationButton from "../componentsReusable/navigationButton/navigationButton";
 import "./cardStudio.css";
 import studio from "../../assets/studio.jpg";
 import ServiziSection from "./serviziSection/serviziSection";
 import ProjectSection from "./projectSection/projectSection";
-import CarouselCards from "./projectSection/projectSection";
 
 function CardStudio() {
   const studioimg = studio;
@@ -36,8 +35,7 @@ function CardStudio() {
       <hr />
       <ServiziSection />
       <hr />
-      <CarouselCards/>
-
+      <ProjectSection />
     </div>
     
     </>

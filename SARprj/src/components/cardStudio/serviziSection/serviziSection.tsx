@@ -7,7 +7,7 @@ function ServiziSection() {
     <div className="container my-5 p-4">
       <div className="row">
         <div className="col-12 ms-5">
-          <h3 className="ms-1">
+          <h3 className="ms-1 mb-5">
             <strong>I Nostri Servizi</strong>
           </h3>
         </div>
