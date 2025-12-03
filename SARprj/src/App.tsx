@@ -6,6 +6,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 /* import elements and pages */
 import Navbar from "./components/navbar/navbar";
 import Home from "./pages/home";
+import Footer from "./components/footer/footer";
+
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       {/* home page */}
       <Home />
 
-      <footer></footer>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

@@ -21,7 +21,7 @@ function NavigationButton(props: NavigationButtonProps) {
 
   return (
     <button
-      className={`btn rounded-0 px-3 pt-3 position-relative overflow-hidden`} 
+      className={`btn rounded-0 px-3 pt-3 position-relative overflow-hidden `} 
       style={{
         backgroundColor: isHovered ? textColor : colorBackground,
         borderColor: borderColor,

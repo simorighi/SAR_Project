@@ -10,7 +10,6 @@ interface ICardProps {
   textCard: string;
   textButton: React.ReactNode;
   fontSize?: fontSizeOptions;
-
 }
 
 
@@ -19,7 +18,7 @@ function Card({ imgSrc, textCard, titleCard, textButton, fontSize = "fs-6" }: IC
     <div className="card bg-transparent border-0" style={{ width: "18rem" }}>
       <img
         src={imgSrc}
-        className="card-img-top rounded-2"
+        className="card-img-top border rounded-2"
         alt="Project Image"
         style={{ height: "13rem" }}
       />
@@ -32,6 +31,7 @@ function Card({ imgSrc, textCard, titleCard, textButton, fontSize = "fs-6" }: IC
             textColor="#ceb399"
             contentText={textButton}
             fontSize="fs-6"
+            borderWidth="1.5px"
           />
       </div>
     </div>

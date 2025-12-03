@@ -14,6 +14,7 @@ function cardNavigation() {
             textColor="#ceb399"
             contentText="Learn More"
             fontSize="fs-5"
+            borderWidth="1.5px"
           />
         </div>
       </div>

@@ -26,6 +26,7 @@ function CardStudio() {
             textColor="#ceb399"
             contentText="Scopri di più sullo studio"
             fontSize="fs-6"
+            borderWidth="\1.5px"
           />
         </div>
         <div className="col-6 d-flex align-items-center justify-content-center divImg">

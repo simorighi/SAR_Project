@@ -17,7 +17,7 @@ function ProjectSection() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="60"
-          height="26"
+          height="20"
           fill="currentColor"
           className="bi bi-arrow-right"
           viewBox="0 0 16 16"
@@ -38,7 +38,7 @@ function ProjectSection() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="60"
-          height="26"
+          height="20"
           fill="currentColor"
           className="bi bi-arrow-right"
           viewBox="0 0 16 16"
@@ -59,7 +59,7 @@ function ProjectSection() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="60"
-          height="26"
+          height="20"
           fill="currentColor"
           className="bi bi-arrow-right"
           viewBox="0 0 16 16"
